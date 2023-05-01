@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-1300px);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+@keyframes wing-fly {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-20deg) skew(-10deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-20deg) skew(-10deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg) skew(-10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-20deg) skew(-10deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(-20deg) skew(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes eyelid-blink {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.frame1 {
+  background-color: #b8dbff;
+}
+.frame1__bird {
+  position: absolute;
+  top: 3em;
+  left: 51%;
+  animation: slide-in 2.3s ease-out forwards;
+}
+.frame1__bird #wing {
+  transform-origin: 70% 50%;
+  animation: wing-fly 2.5s forwards;
+}
+.frame1__bird #eyelid {
+  animation: eyelid-blink 1.3s ease-in-out forwards;
+  animation-delay: 2.7s;
+}
+.frame1__text {
+  position: relative;
+  text-align: center;
+  width: 418px;
+  margin: 0 auto;
+  top: 16em;
+}
+.frame1__text h1 {
+  font-size: 3.7em;
+}
+.frame1__text h2 {
+  font-size: 2.5em;
+}
+.frame1__text h3 {
+  font-size: 2em;
+}
+.frame1__text h4 {
+  font-size: 1.5em;
+}
+.frame1__text p {
+  font-size: 1.7em;
+}
+.frame1__text-highlight {
+  background-color: #0000ff;
+  color: white;
+}
+
+.frame2 {
+  background-color: #b8dbff;
+}/*# sourceMappingURL=index.css.map */
