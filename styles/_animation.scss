@@ -9,50 +9,51 @@
 
 @keyframes wing-fly {
     0% {
-        transform: rotate(0deg);
-      }
-      10% {
-        transform: rotate(-20deg) skew(-10deg);
-      }
-      20% {
-        transform: rotate(0deg);
-      }
-      30% {
-        transform: rotate(-20deg) skew(-10deg);
-      }
-      40% {
-        transform: rotate(0deg);
-      }
-      50% {
-        transform: rotate(-20deg) skew(-10deg);
-      }
-      60% {
-        transform: rotate(0deg);
-      }
-      70% {
-        transform: rotate(-20deg) skew(-10deg);
-      }
-      80% {
-        transform: rotate(0deg);
-      }
-      90% {
-        transform: rotate(-20deg) skew(-10deg);
-      }
-      100% {
-        transform: rotate(0deg);
-      }
-  }
-
-
-
-  @keyframes eyelid-blink {
-    0% {
-      transform: translateY(0);
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(-20deg) skew(-30deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    30% {
+      transform: rotate(-20deg) skew(-30deg);
+    }
+    40% {
+      transform: rotate(0deg);
     }
     50% {
-      transform: translateY(5px);
+      transform: rotate(-20deg) skew(-30deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: rotate(-20deg) skew(-30deg);
+    }
+    80% {
+      transform: rotate(0deg);
+    }
+    90% {
+      transform: rotate(-20deg) skew(-30deg);
     }
     100% {
-      transform: translateY(0);
+      transform: rotate(0deg);
     }
+}
+
+
+
+@keyframes eyelid-blink {
+  0% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+

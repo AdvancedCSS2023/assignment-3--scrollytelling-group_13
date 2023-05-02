@@ -51,8 +51,20 @@
             font-size: 1.7em;
         }
         &-highlight {
-            background-color: $secondary-blue;
-            color: white;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right,$primary-blue 50%,$secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:left bottom;
+            color: rgba(255, 255, 255, 0);
+            transition: all 1.2s ease-in-out;
+        }
+        .live {
+            background: linear-gradient(to right, $primary-blue 50%, $secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            color: rgb(255, 255, 255);
+ 
         }
     }
 }

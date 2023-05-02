@@ -1,3 +1,43 @@
 .frame2 {
     background-color: $primary-blue;
+
+    &__text {
+        position: relative;
+        text-align: center;
+        width: 418px;
+        margin: 0 auto;
+        top: 16em;
+
+        h1 {
+            font-size: 3.7em;
+            padding: 0.1em 0.4em;
+            background-color: blue;
+        }
+
+        h2 {
+
+            font-size: 2.5em;
+        }
+
+        h3 {
+
+            font-size: 2em;
+        }
+
+        h4 {
+
+            font-size: 1.5em;
+        }
+
+        p {
+
+            font-size: 1.7em;
+        }
+
+        &-firstline {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
 }

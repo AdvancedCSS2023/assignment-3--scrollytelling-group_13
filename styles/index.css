@@ -42,31 +42,31 @@ p {
     transform: rotate(0deg);
   }
   10% {
-    transform: rotate(-20deg) skew(-10deg);
+    transform: rotate(-20deg) skew(-30deg);
   }
   20% {
     transform: rotate(0deg);
   }
   30% {
-    transform: rotate(-20deg) skew(-10deg);
+    transform: rotate(-20deg) skew(-30deg);
   }
   40% {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(-20deg) skew(-10deg);
+    transform: rotate(-20deg) skew(-30deg);
   }
   60% {
     transform: rotate(0deg);
   }
   70% {
-    transform: rotate(-20deg) skew(-10deg);
+    transform: rotate(-20deg) skew(-30deg);
   }
   80% {
     transform: rotate(0deg);
   }
   90% {
-    transform: rotate(-20deg) skew(-10deg);
+    transform: rotate(-20deg) skew(-30deg);
   }
   100% {
     transform: rotate(0deg);
@@ -129,10 +129,50 @@ section {
   font-size: 1.7em;
 }
 .frame1__text-highlight {
-  background-color: #0000ff;
-  color: white;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #b8dbff 50%, #0000ff 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: rgba(255, 255, 255, 0);
+  transition: all 1.2s ease-in-out;
+}
+.frame1__text .live {
+  background: linear-gradient(to right, #b8dbff 50%, #0000ff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: rgb(255, 255, 255);
 }
 
 .frame2 {
   background-color: #b8dbff;
+}
+.frame2__text {
+  position: relative;
+  text-align: center;
+  width: 418px;
+  margin: 0 auto;
+  top: 16em;
+}
+.frame2__text h1 {
+  font-size: 3.7em;
+  padding: 0.1em 0.4em;
+  background-color: blue;
+}
+.frame2__text h2 {
+  font-size: 2.5em;
+}
+.frame2__text h3 {
+  font-size: 2em;
+}
+.frame2__text h4 {
+  font-size: 1.5em;
+}
+.frame2__text p {
+  font-size: 1.7em;
+}
+.frame2__text-firstline {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */
