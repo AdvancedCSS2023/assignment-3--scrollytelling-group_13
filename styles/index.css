@@ -83,7 +83,10 @@ p {
     transform: translateY(0);
   }
 }
-section {
+body {
+  height: 100vh;
+}
+body section {
   height: 100vh;
   width: 100%;
   position: relative;
@@ -131,14 +134,14 @@ section {
 .frame1__text-highlight {
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right, #b8dbff 50%, #0000ff 50%);
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
   background-size: 200% 100%;
   background-position: left bottom;
   color: rgba(255, 255, 255, 0);
   transition: all 1.2s ease-in-out;
 }
 .frame1__text .live {
-  background: linear-gradient(to right, #b8dbff 50%, #0000ff 50%);
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   color: rgb(255, 255, 255);
@@ -146,18 +149,34 @@ section {
 
 .frame2 {
   background-color: #b8dbff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.frame2__lamp {
+  height: 100%;
+  transform: translatey(25%);
 }
 .frame2__text {
   position: relative;
   text-align: center;
-  width: 418px;
-  margin: 0 auto;
-  top: 16em;
+  line-height: 1.5;
 }
 .frame2__text h1 {
   font-size: 3.7em;
-  padding: 0.1em 0.4em;
-  background-color: blue;
+  padding: 0.05em 0.6em;
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: rgba(255, 255, 255, 0);
+  transition: all 1.2s ease-in-out;
+}
+.frame2__text .live {
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: rgb(255, 255, 255);
 }
 .frame2__text h2 {
   font-size: 2.5em;

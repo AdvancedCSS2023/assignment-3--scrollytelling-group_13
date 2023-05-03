@@ -1,17 +1,37 @@
 .frame2 {
     background-color: $primary-blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+    &__lamp {
+        height: 100%;
+        transform: translatey(25%);
+    }
+
 
     &__text {
         position: relative;
         text-align: center;
-        width: 418px;
-        margin: 0 auto;
-        top: 16em;
+        line-height: 1.5;
 
         h1 {
             font-size: 3.7em;
-            padding: 0.1em 0.4em;
-            background-color: blue;
+            padding: 0.05em 0.6em;
+            background: linear-gradient(to right,$primary-blue 50%,$secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:left bottom;
+            color: rgba(255, 255, 255, 0);
+            transition: all 1.2s ease-in-out;
+        }
+
+        .live {
+            background: linear-gradient(to right, $primary-blue 50%, $secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            color: rgb(255, 255, 255);
         }
 
         h2 {
