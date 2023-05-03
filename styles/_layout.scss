@@ -1,15 +1,14 @@
 
   
 
-body {
-    height: 100vh;
-  
+body {  
     section {
-      height: 100vh;
-      width: 100%;
-      position: relative;
+        height: auto;
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
     }
-  }
+}
   
   
 
@@ -17,3 +16,5 @@ body {
 @import 'frames/frame1';
 
 @import 'frames/frame2';
+
+@import 'frames/frame3';

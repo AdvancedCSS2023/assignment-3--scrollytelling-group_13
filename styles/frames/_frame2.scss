@@ -1,14 +1,35 @@
 .frame2 {
-    background-color: $primary-blue;
+    background-color: $night-color;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 4em 0;
+    width: 100%;
+    min-height: 100vh;
 
 
     &__lamp {
         height: 100%;
-        transform: translatey(25%);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        svg {
+            max-width: 80%;
+
+        }
+
+        #light-beam {
+            fill: $night-color;
+        }
+
+        .observe {
+            position: absolute;
+            bottom: 0;
+        }
     }
 
 
@@ -16,11 +37,12 @@
         position: relative;
         text-align: center;
         line-height: 1.5;
+        color: white;
 
         h1 {
             font-size: 3.7em;
             padding: 0.05em 0.6em;
-            background: linear-gradient(to right,$primary-blue 50%,$secondary-blue 50%);
+            background: linear-gradient(to right,$night-color 50%,$primary-blue 50%);
             background-size: 200% 100%;
             background-position:left bottom;
             color: rgba(255, 255, 255, 0);
@@ -28,10 +50,10 @@
         }
 
         .live {
-            background: linear-gradient(to right, $primary-blue 50%, $secondary-blue 50%);
+            background: linear-gradient(to right, $night-color 50%, $primary-blue 50%);
             background-size: 200% 100%;
             background-position:right bottom;
-            color: rgb(255, 255, 255);
+            color: black;
         }
 
         h2 {
@@ -59,5 +81,11 @@
             justify-content: space-around;
             align-items: center;
         }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .frame2 {
+        flex-direction: column;
     }
 }

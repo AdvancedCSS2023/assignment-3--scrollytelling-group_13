@@ -24,22 +24,29 @@ const observer2 = new IntersectionObserver(entries => {
 });
 observer2.observe(stat2);
 
-
-const observer = new IntersectionObserver((entries) => {
+const lightBeam = document.getElementById("light-beam");
+const observer3 = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        console.log("Element is intersecting");
-        document.getElementById("light-beam").setAttribute("id", "newID");
-      } 
+        if(lightBeam.style.fill != "#b8dbff"){
+            if (entry.isIntersecting) {
+                console.log("Element is intersecting");
+                lightBeam.style.fill = "#b8dbff";
+                
+                setTimeout(function() {
+                lightBeam.style.fill = "";
+                }, 800); 
+                
+                setTimeout(function() {
+                lightBeam.style.fill = "#b8dbff";
+                }, 1400); 
+
+            } 
+        }
     });
 }, { threshold: 0.5 });
-  
-var svgObject = document.getElementById('light');
-svgObject.addEventListener('load', function() {
-  var svgDoc = svgObject.contentDocument;
-  var element = svgDoc.getElementById('guy');
-  observer.observe(element);
-});
+
+const lampObs = document.querySelector('.observe');
+observer3.observe(lampObs);
 
 
 

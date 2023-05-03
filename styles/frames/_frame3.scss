@@ -1,0 +1,41 @@
+.frame3 {
+    background-color: $primary-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__trip {
+        width: auto;
+        height: auto;
+        position: relative;
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+
+
+        svg {
+            max-width: 90%;
+            z-index: 20;
+        }
+        &-blocker {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: $primary-blue;
+            top: 0;
+            animation-name: move-down-and-left;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+            z-index: 40;
+        }
+
+        &-observe {
+            position: absolute;
+            background-color: black;
+            height: 50px;
+            width: 50px;
+            bottom: 0;
+            z-index: 999;
+        }
+    }
+}

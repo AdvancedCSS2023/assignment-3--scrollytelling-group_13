@@ -57,3 +57,15 @@
   }
 }
 
+
+@keyframes move-down-and-left {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(40%) translateX(-19%);
+  }
+  100% {
+    transform: translateY(40%) translateX(-100%);
+  }
+}
