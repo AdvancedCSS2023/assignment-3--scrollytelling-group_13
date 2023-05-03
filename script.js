@@ -34,7 +34,7 @@ const observer3 = new IntersectionObserver((entries) => {
                 
                 setTimeout(function() {
                 lightBeam.style.fill = "";
-                }, 800); 
+                }, 500); 
                 
                 setTimeout(function() {
                 lightBeam.style.fill = "#b8dbff";
@@ -50,3 +50,26 @@ observer3.observe(lampObs);
 
 
 
+const observer4 = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    document.querySelector('.frame3__trip-blocker').classList.add('animate');
+  } 
+});
+
+const tripObs = document.querySelector('.frame3__trip-observe');
+observer4.observe(tripObs);
+
+
+
+const stat3 = document.querySelector('.stat3');
+
+const observer5 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      stat3.classList.add('live');
+    } else {
+        stat3.classList.remove('live');
+    }
+  });
+});
+observer5.observe(stat3);
