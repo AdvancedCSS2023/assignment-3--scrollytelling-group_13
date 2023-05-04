@@ -1,0 +1,92 @@
+.frame2 {
+    background-color: $night-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4em 0;
+    width: 100%;
+    min-height: 100vh;
+
+
+    &__lamp {
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        svg {
+            max-width: 80%;
+
+        }
+
+        #light-beam {
+            fill: $night-color;
+        }
+
+        .observe {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+
+    &__text {
+        position: relative;
+        text-align: center;
+        line-height: 1.5;
+        color: white;
+
+        h1 {
+            text-align: center;
+            font-size: 3.7em;
+            padding: 0.05em 0.6em;
+            background: linear-gradient(to right,$night-color 50%,$primary-blue 50%);
+            background-size: 200% 100%;
+            background-position:left bottom;
+            color: rgba(255, 255, 255, 0);
+            transition: all 1.2s ease-in-out;
+        }
+
+        .live {
+            background: linear-gradient(to right, $night-color 50%, $primary-blue 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            color: black;
+        }
+
+        h2 {
+
+            font-size: 2.5em;
+        }
+
+        h3 {
+
+            font-size: 2em;
+        }
+
+        h4 {
+
+            font-size: 1.5em;
+        }
+
+        p {
+
+            font-size: 1.7em;
+        }
+
+        &-firstline {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .frame2 {
+        flex-direction: column;
+    }
+}

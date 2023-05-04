@@ -1,0 +1,72 @@
+.frame3 {
+    background-color: $primary-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        z-index: 999;
+        position: relative;
+        bottom: -8em;
+
+        h1 {
+            font-size: clamp(2em, 3.7em, 7vw); /* add min and max font sizes */
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right,$primary-blue 50%,$secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:left bottom;
+            color: rgba(255, 255, 255, 0);
+            transition: all 1.2s ease-in-out;
+            padding: 0.2em 0.4em;
+          }
+          
+          .live {
+            background: linear-gradient(to right, $primary-blue 50%, $secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            color: rgb(255, 255, 255);
+          }
+          
+          h2 {
+            font-size: clamp(1.5em, 2em, 4vw); /* add min and max font sizes */
+          }
+          
+    }
+
+    &__trip {
+
+        position: relative;
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+
+        svg {
+            z-index: 20;
+            position: relative;
+        }
+        &-blocker {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: $primary-blue;
+            transform: translateY(0) translateX(0);
+            z-index: 40;
+            border-radius: 0 300px 0 0;
+        }
+        &-blocker.animate {
+            animation-name: move-down-and-left;
+            animation-duration: 6s;
+            animation-fill-mode: forwards;
+          }
+
+        &-observe {
+            position: absolute;
+            bottom: 10%;
+            z-index: 999;
+        }
+    }
+}

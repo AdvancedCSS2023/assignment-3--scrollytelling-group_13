@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 400;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-1300px);
+  }
+  100% {
+    transform: translateX(-60%);
+  }
+}
+@keyframes wing-fly {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-20deg) skew(-30deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-20deg) skew(-30deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg) skew(-30deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-20deg) skew(-30deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(-20deg) skew(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes eyelid-blink {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move-down-and-left {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  20% {
+    transform: translateY(40%) translateX(0);
+  }
+  100% {
+    transform: translateY(40%) translateX(-100%);
+  }
+}
+body section {
+  height: auto;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.frame1 {
+  background-color: #b8dbff;
+}
+.frame1__bird {
+  position: absolute;
+  top: 3em;
+  left: 51%;
+  animation: slide-in 2.3s ease-out forwards;
+}
+.frame1__bird #wing {
+  transform-origin: 70% 50%;
+  animation: wing-fly 2.5s forwards;
+}
+.frame1__bird #eyelid {
+  animation: eyelid-blink 1.3s ease-in-out forwards;
+  animation-delay: 2.7s;
+}
+.frame1__text {
+  position: relative;
+  text-align: center;
+  width: 418px;
+  margin: 0 auto;
+  top: 16em;
+}
+.frame1__text h1 {
+  font-size: 3.7em;
+}
+.frame1__text h2 {
+  font-size: 2.5em;
+}
+.frame1__text h3 {
+  font-size: 2em;
+}
+.frame1__text h4 {
+  font-size: 1.5em;
+}
+.frame1__text p {
+  font-size: 1.7em;
+}
+.frame1__text-highlight {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: rgba(255, 255, 255, 0);
+  transition: all 1.2s ease-in-out;
+}
+.frame1__text .live {
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: rgb(255, 255, 255);
+}
+
+.frame2 {
+  background-color: #161f4d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 0;
+  width: 100%;
+  min-height: 100vh;
+}
+.frame2__lamp {
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame2__lamp svg {
+  max-width: 80%;
+}
+.frame2__lamp #light-beam {
+  fill: #161f4d;
+}
+.frame2__lamp .observe {
+  position: absolute;
+  bottom: 0;
+}
+.frame2__text {
+  position: relative;
+  text-align: center;
+  line-height: 1.5;
+  color: white;
+}
+.frame2__text h1 {
+  text-align: center;
+  font-size: 3.7em;
+  padding: 0.05em 0.6em;
+  background: linear-gradient(to right, #161f4d 50%, #b8dbff 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: rgba(255, 255, 255, 0);
+  transition: all 1.2s ease-in-out;
+}
+.frame2__text .live {
+  background: linear-gradient(to right, #161f4d 50%, #b8dbff 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: black;
+}
+.frame2__text h2 {
+  font-size: 2.5em;
+}
+.frame2__text h3 {
+  font-size: 2em;
+}
+.frame2__text h4 {
+  font-size: 1.5em;
+}
+.frame2__text p {
+  font-size: 1.7em;
+}
+.frame2__text-firstline {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .frame2 {
+    flex-direction: column;
+  }
+}
+.frame3 {
+  background-color: #b8dbff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frame3__text {
+  z-index: 999;
+  position: relative;
+  bottom: -8em;
+}
+.frame3__text h1 {
+  font-size: clamp(2em, 3.7em, 7vw); /* add min and max font sizes */
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: rgba(255, 255, 255, 0);
+  transition: all 1.2s ease-in-out;
+  padding: 0.2em 0.4em;
+}
+.frame3__text .live {
+  background: linear-gradient(to right, #b8dbff 50%, #2C3D94 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: rgb(255, 255, 255);
+}
+.frame3__text h2 {
+  font-size: clamp(1.5em, 2em, 4vw); /* add min and max font sizes */
+}
+.frame3__trip {
+  position: relative;
+  max-width: 90%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.frame3__trip svg {
+  z-index: 20;
+  position: relative;
+}
+.frame3__trip-blocker {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #b8dbff;
+  transform: translateY(0) translateX(0);
+  z-index: 40;
+  border-radius: 0 300px 0 0;
+}
+.frame3__trip-blocker.animate {
+  animation-name: move-down-and-left;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+.frame3__trip-observe {
+  position: absolute;
+  bottom: 10%;
+  z-index: 999;
+}
+
+.frame4 {
+  background-color: #b8dbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15em;
+}
+.frame4__text {
+  position: absolute;
+  width: 700px;
+  max-width: 80%;
+  z-index: 1;
+}
+.frame4__text h2 {
+  font-size: clamp(2em, 2.7em, 4vw);
+  color: #161f4d;
+  text-transform: none;
+}
+.frame4__text img {
+  height: 300px;
+  float: right;
+}
+.frame4__window-blinds {
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 10;
+}
+.frame4__window-blinds .blind {
+  width: 100%;
+  height: 10%;
+  background-color: #161f4d;
+  transform-origin: center;
+  z-index: 999;
+}
+.frame4__window-blinds .roof {
+  width: 100%;
+  height: 2%;
+  background-color: #161f4d;
+}/*# sourceMappingURL=index.css.map */

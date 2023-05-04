@@ -1,0 +1,71 @@
+.frame1 {
+    background-color: $primary-blue;
+
+
+    &__bird {
+        position: absolute;
+        top: 3em;
+        left: 51%;
+        animation: slide-in 2.3s ease-out forwards;
+
+
+        #wing {
+            transform-origin: 70% 50%;
+            animation: wing-fly  2.5s  forwards;
+        }
+
+        #eyelid {
+            animation: eyelid-blink 1.3s ease-in-out forwards;
+            animation-delay: 2.7s;
+        }
+    }
+
+    &__text {
+        position: relative;
+        text-align: center;
+        width: 418px;
+        margin: 0 auto;
+        top: 16em;
+
+        h1 {
+            font-size: 3.7em;
+        }
+
+        h2 {
+
+            font-size: 2.5em;
+        }
+
+        h3 {
+
+            font-size: 2em;
+        }
+
+        h4 {
+
+            font-size: 1.5em;
+        }
+
+        p {
+
+            font-size: 1.7em;
+        }
+        &-highlight {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right,$primary-blue 50%,$secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:left bottom;
+            color: rgba(255, 255, 255, 0);
+            transition: all 1.2s ease-in-out;
+        }
+        .live {
+            background: linear-gradient(to right, $primary-blue 50%, $secondary-blue 50%);
+            background-size: 200% 100%;
+            background-position:right bottom;
+            color: rgb(255, 255, 255);
+ 
+        }
+    }
+}
+
