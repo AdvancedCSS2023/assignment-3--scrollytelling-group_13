@@ -1,0 +1,42 @@
+.frame4 {
+    background-color: $primary-blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15em;
+
+    &__text {
+        position: absolute;
+        width: 700px;
+        max-width: 80%;
+        z-index: 1;
+        h2 {
+            font-size: clamp(2em, 2.7em, 4vw);
+            color: $night-color;
+            text-transform: none;
+        }
+        img {
+            height: 300px;
+            float: right;
+        }
+    }
+    &__window-blinds {
+        width: 100%;
+        overflow: hidden;
+        height: 100vh;
+        z-index: 10;
+        .blind {
+            width: 100%;
+            height: 10%;
+            background-color: $night-color;
+            transform-origin: center;
+            z-index: 999;
+        }
+        .roof {
+            width: 100%;
+            height: 2%;
+            background-color: $night-color;
+        }
+    }
+
+}
